@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<title>Converter</title>
+<body>
+<style>
+  
+</style>
+<h2>Length Converter</h2>
+<p>Enter a value in the field</p>
+
+<p>
+<label>Meters</label>
+<input id="inputm" type="number" placeholder="meters" oninput="meterConverter(this.value)" onchange="meterConverter(this.value)">
+</p>
+
+<p>Cm: <span id="output_cm"></span></p>
+<p>In: <span id="output_in"></span></p>
+<p>Jards: <span id="output_jards"></span></p>
+
+<script>
+function meterConverter(valNum) {
+  document.getElementById("output_cm").innerHTML=valNum*100;
+  document.getElementById("output_in").innerHTML=valNum*39.3701;
+  document.getElementById("output_jards").innerHTML=valNum*1.09361;
+}
+</script>
+<p>Enter a value in the field</p>
+<p>
+  <label>Inches</label>
+  <input id="inputin" type="number" placeholder="inches" oninput="inchesConverter(this.value)" onchange="inchesConverter(this.value)">
+  </p>
+  
+  <p>Cm: <span id="output_cm-1"></span></p>
+  <p>M: <span id="output_meters"></span></p>
+  <p>Jards: <span id="output_jards-1"></span></p>
+  
+  <script>
+  function inchesConverter(valNum) {
+    document.getElementById("output_cm-1").innerHTML=valNum*2.54;
+    document.getElementById("output_meters").innerHTML=valNum*0.0254;
+    document.getElementById("output_jards-1").innerHTML=valNum*0.028;
+  }
+  </script>
+
+<p>Enter a value in the field</p>
+
+<p>
+  <label>Cm</label>
+  <input id="inputin" type="number" placeholder="cm" oninput="cmConverter(this.value)" onchange="cmConverter(this.value)">
+  </p>
+  
+  <p>In: <span id="output_in-1"></span></p>
+  <p>M: <span id="output_meters-1"></span></p>
+  <p>Jards: <span id="output_jards-2"></span></p>
+  
+  <script>
+  function cmConverter(valNum) {
+    document.getElementById("output_in-1").innerHTML=valNum*0.39;
+    document.getElementById("output_meters-1").innerHTML=valNum*0.010;
+    document.getElementById("output_jards-2").innerHTML=valNum*0.011;
+  }
+  </script>
+
+<p>Enter a value in the field</p>
+
+<p>
+  <label>Jards</label>
+  <input id="inputin" type="number" placeholder="jards" oninput="jardConverter(this.value)" onchange="jardConverter(this.value)">
+  </p>
+
+  <p>Cm: <span id="output_cm-2"></span></p>
+  <p>In: <span id="output_in-2"></span></p>
+  <p>M: <span id="output_meters-2"></span></p>
+  
+  
+  <script>
+  function jardConverter(valNum) {
+    document.getElementById("output_in-2").innerHTML=valNum*36;
+    document.getElementById("output_meters-2").innerHTML=valNum*0.91;
+    document.getElementById("output_cm-2").innerHTML=valNum*91;
+  }
+  </script>
+
+</body>
+</html>
+
+
+
